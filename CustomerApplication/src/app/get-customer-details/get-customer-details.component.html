@@ -1,0 +1,31 @@
+<div style="text-align:center">
+    <button class="btn btn-primary" (click)="getDetails()"> Get Customer Details</button>
+  </div>
+  
+  <ngx-ui-loader ></ngx-ui-loader>
+    
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserId</th>
+          <th scope="col">Body</th>
+          <th scope="col">Title</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of data;index as i">
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>{{item.userId}}</td>
+          <td>{{item.body}}</td>
+          <td>{{item.title}}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  <!-- <div>
+    <ul class="list-group" *ngFor="let item of data">
+      <li class="list-group-item"> {{item.title}} </li>    
+    </ul>
+  
+  </div> -->
